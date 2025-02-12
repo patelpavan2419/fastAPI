@@ -1,0 +1,47 @@
+### List all books
+GET http://localhost:8000/books
+
+### List book details with title
+GET http://localhost:8000/books/Title One
+
+### List book details by category
+GET http://localhost:8000/books/?category=science
+
+
+### List book details by auther
+GET http://localhost:8000/books/byauthor/?author=Author Two
+
+
+### List book details by auther and category
+GET http://localhost:8000/books/Author Two/?category=math
+
+### add new book details
+POST http://localhost:8000/books/create_book
+Content-Type: application/json
+
+{
+    "title": "Title ten",
+    "author": "Author One",
+    "category": "math"
+}
+
+### update book details
+PUT http://localhost:8000/books/update_book
+Content-Type: application/json
+
+{
+    "title": "Title ten",
+    "author": "Author One",
+    "category": "science"
+}
+
+
+### delete book by 
+DELETE  http://localhost:8000/books/delete_book/Title Two
+Content-Type: application/json
+
+{
+    "title": "Title ten",
+    "author": "Author One",
+    "category": "science"
+}
