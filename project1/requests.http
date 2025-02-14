@@ -2,7 +2,13 @@
 GET http://localhost:8000/books
 
 ### List book details with title
-GET http://localhost:8000/books/Title One
+GET http://localhost:8000/books/Title Three
+
+### List book details with book id
+GET http://localhost:8000/books/id/4
+
+### List book details by published year
+GET http://localhost:8000/books/published_date/1995
 
 ### List book details by category
 GET http://localhost:8000/books/?category=science
@@ -13,7 +19,7 @@ GET http://localhost:8000/books/byauthor/?author=Author Two
 
 
 ### List book details by auther and category
-GET http://localhost:8000/books/Author Two/?category=math
+GET http://localhost:8000/books/Author Two/?category=science
 
 ### add new book details
 POST http://localhost:8000/books/create_book
@@ -22,7 +28,9 @@ Content-Type: application/json
 {
     "title": "Title ten",
     "author": "Author One",
-    "category": "math"
+    "category": "mac",
+    "published_date": "2021"
+
 }
 
 ### update book details
@@ -32,7 +40,8 @@ Content-Type: application/json
 {
     "title": "Title ten",
     "author": "Author One",
-    "category": "science"
+    "category": "science",
+    "published_date": "2022"
 }
 
 
